@@ -169,15 +169,12 @@ $app->post("/admin/forgot/reset", function() {
 	$forgot = User::validForgotDecrypt($_POST["code"]);
 
 	User::setForgotUsed($forgot["idrecovery"]);
-	echo "<b>idrecovery do \$forgot:</b> ";
-	print_r($forgot["idrecovery"]);
 	$user = new User();
 	$user->get($forgot["iduser"]);
-	echo "<b>\n\n\$user:</b> ";
-	print_r($user);
 	$password = password_hash($_POST["password"], PASSWORD_DEFAULT, [
 		"cost" => 12
 	]);
+	
 	$user->setPassword($password);
 
 	$page = new PageAdmin([
