@@ -58,7 +58,8 @@ desired effect
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="/res/admin/index2.html" class="logo">
+    <a href="/index.php/admin" class="logo">
+    <!--<a href="/res/admin/index2.html" class="logo">-->
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
@@ -258,6 +259,7 @@ desired effect
         <!-- Optionally, you can add icons to the links -->
         <li><a href="/index.php/admin/users"><i class="fa fa-users"></i> <span>Usuários</span></a></li>
         <li><a href="/index.php/admin/categories"><i class="fa fa-link"></i> <span>Categorias</span></a></li>
+        <li><a href="/index.php/admin/products"><i class="fa fa-link"></i> <span>Produtos</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
             <span class="pull-right-container">
