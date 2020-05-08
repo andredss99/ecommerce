@@ -79,6 +79,9 @@ class Product extends Model{
         $extension = explode('.', $file["name"]);
         $extension = end($extension);
 
+        var_dump($_FILES);
+        exit;
+
         switch($extension) {
             case "jpg":
                 $image = imagecreatefromjpeg($file["tmp_name"]);
