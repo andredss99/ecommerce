@@ -3,6 +3,7 @@
 use \Andredss\Page;
 use \Andredss\Model\Product;
 use \Andredss\Model\Category;
+use \Andredss\Model\Cart;
 
 $app->get('/', function() {
 	$products = Product::listAll();
@@ -51,4 +52,12 @@ $app->get("/products/:desurl", function($desurl) {
 		'product' => $product->getValues(),
 		'categories' => $product->getCategories()
 	]);
+});
+
+$app->get("/cart", function() {
+	$cart = Cart::getFromSession();
+
+	$page = new Page();
+	
+	$page->setTpl("cart");
 });
